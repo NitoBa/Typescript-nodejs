@@ -4,6 +4,14 @@ Studies in NodeJs, creating application (API) in typescript using MongoDB and JW
 
 ---
 
+# ↓Technologies used
+
+- NodeJs
+- Typescript
+- MongoDB database Nosql
+- Authentication JWT
+- Express
+
 # ↓ Quick Start
 
 - clone this project or fork
@@ -40,7 +48,7 @@ The user created on the database MongoDB own your password encrypted
 
 This Service will generate a token JWT for user with expiration of 24hrs
 
-The token will be  used in others routes
+The token will used in others routes
 
 - SessionService
 
