@@ -40,7 +40,7 @@ The user created on the database MongoDB own your password encrypted
 
 This Service will generate a token JWT for user with expiration of 24hrs
 
-The token will used in others routes
+The token will  used in others routes
 
 - SessionService
 
