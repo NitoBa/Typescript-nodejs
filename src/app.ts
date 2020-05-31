@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import routes from "./routes";
+import 'dotenv/config'
 
 class App {
 
@@ -9,7 +10,7 @@ class App {
     public constructor() {
         this.express = express()
         this.middlewares()
-        this.database()
+        this.database(<string>process.env.MONGO_URL)
         this.routes()
     }
 
@@ -17,8 +18,8 @@ class App {
         this.express.use(express.json())
     }
 
-    private database(): void {
-        mongoose.connect("mongodb+srv://nitoba:nitoba@nodeestudos-rwxdm.mongodb.net/nodetypescript?retryWrites=true&w=majority", {
+    private database(MONGO_URL: string): void {
+        mongoose.connect(MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         })

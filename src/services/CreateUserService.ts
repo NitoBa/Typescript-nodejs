@@ -1,6 +1,6 @@
 import IUser from "../models/UserInterface";
-import UserModel from "../models/UserModel";
 import UserRespository from "../repositories/UserRepository";
+import HashProvider from "../providers/HashProvider";
 
 interface IResquest {
     username: string,
@@ -11,7 +11,9 @@ interface IResquest {
 
 class CreateUserService {
 
-    public async createNewUser({ username, email, password }: IResquest): Promise<IUser | object> {
+
+
+    public async createNewUser({ username, email, password }: IResquest): Promise<{}> {
 
         const checkUserExists = await UserRespository.findUserbyName(username)
 
@@ -20,11 +22,13 @@ class CreateUserService {
             return { "message": "user already exists" }
         }
 
-        const user = await UserRespository.createNewUser(
-            username, email, password
+        const hashedPassword = await HashProvider.generateHash(password);
+
+        await UserRespository.createNewUser(
+            username, email, hashedPassword
         )
 
-        return user;
+        return { 'message': "User created" };
     }
 }
 

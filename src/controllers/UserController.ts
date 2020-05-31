@@ -5,9 +5,11 @@ import CreateUserService from "../services/CreateUserService";
 
 
 class UserController {
+
+
     public async index(req: Request, res: Response): Promise<Response> {
 
-        const users = await UserModel.find()
+        const users = await UserModel.find().select('-password')
         return res.json(users);
     }
 
@@ -20,9 +22,7 @@ class UserController {
             email,
             password
         });
-        if (user != []) {
-            return res.status(400).json(user);
-        }
+
 
         return res.status(201).json(user);
     }
