@@ -1,0 +1,13 @@
+{
+  "name": "TypescriptNodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Bruno Santos <brukum2@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
