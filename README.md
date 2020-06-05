@@ -12,7 +12,10 @@ Studies in NodeJs, creating application (API) in typescript using MongoDB and JW
 - Authentication JWT
 - Express
 - Design pattern (Service and Repository)
-- [] Dependency Injection
+
+# ↓ Future implementations
+
+- [ ] Dependency Injection
 
 # ↓ Quick Start
 
