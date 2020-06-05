@@ -8,9 +8,11 @@ Studies in NodeJs, creating application (API) in typescript using MongoDB and JW
 
 - NodeJs
 - Typescript
-- MongoDB database Nosql
+- MongoDB
 - Authentication JWT
 - Express
+- Design pattern (Service and Repository)
+- [] Dependency Injection
 
 # ↓ Quick Start
 
